@@ -79,11 +79,11 @@ def sum_dct(dct) -> dict:
 if __name__ == "__main__":    
 
     test_files = {
-        'test1.txt': 7
+        'activity1.txt': 7
         , 'board1.txt': 7
-        , 'activity1.txt': 7
-        , 'hw1volunt.txt': 5
         , 'hw1.txt': 7 # max 25+8(9)=33(34)
+        , 'hw1volunt.txt': 5
+        , 'test1.txt': 7
         #, 'test2.txt': 10
         #, 'activity2.txt': 10
         #, "project.txt": 10
@@ -104,11 +104,16 @@ if __name__ == "__main__":
             append_results(dct_glob, dct)
 
     pprint.pprint(dct_glob, sort_dicts=False)  
+    #with open("results.txt", "w") as output_file:
+    #    pprint.pp(dct_glob, stream=output_file, indent=4)
+        
     dct_glob = sum_dct(dct_glob)
             
     #print(dict_31)
     pprint.pprint(dct_glob, sort_dicts=False)        
-
+    with open("results.txt", "w") as output_file:
+        pprint.pp(dct_glob, stream=output_file, indent=4)
+    
     # with open(__file__[:-2] + 'txt', 'w') as f:  
         # for name, grades in dict_31_norm.items():  
             # st = ',\t'.join([str(round(i)) for i in grades])
