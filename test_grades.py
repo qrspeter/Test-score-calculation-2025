@@ -1,20 +1,6 @@
 import pprint
 import copy
 
-# def load_names(filename):
-
-    # fin = open(filename, 'r')
-    # members = fin.readlines()
-    # fin.close()
-
-    # dct = {}
-
-    # for name in members:
-        # name = name.strip()
-        # dct[name] = []
-    
-    # return dct
-
 def load_results(filename) -> dict:
     fin = open(filename, 'r')
     lines = fin.readlines()
@@ -32,22 +18,6 @@ def load_results(filename) -> dict:
         dct[name] = result
     return dct
     
-# def load_results(filename, dct):
-    
-    # fin = open(filename, 'r')
-    # lines = fin.readlines()
-    # fin.close()
-
-    # for line in lines:
-        # line = line.strip()
-        # lst = line.split(' ')
-        # try:
-            # result = [float(lst[-1])]
-            # name = ' '.join(lst[:-1]).strip()
-        # except ValueError:
-            # name = line
-            # result = [0]
-        # dct[name] += result
 
 def append_results(dct1, dct2):
     for key, key in zip(dct1, dct2):
@@ -55,10 +25,8 @@ def append_results(dct1, dct2):
 
         
 def normalize_dct(dct, max_point=10):
-    print(dct)
     dct_norm = {}
     max_key = max([i[0] for i in dct.values()])
-    print(max_key)
     if max_key == 0:
         return dct
 
@@ -103,20 +71,13 @@ if __name__ == "__main__":
         else:
             append_results(dct_glob, dct)
 
-    pprint.pprint(dct_glob, sort_dicts=False)  
-    #with open("results.txt", "w") as output_file:
-    #    pprint.pp(dct_glob, stream=output_file, indent=4)
+    #pprint.pprint(dct_glob, sort_dicts=False)  
+    with open("results_full.txt", "w") as output_file:
+        pprint.pp(dct_glob, stream=output_file, indent=4)
         
     dct_glob = sum_dct(dct_glob)
             
-    #print(dict_31)
     pprint.pprint(dct_glob, sort_dicts=False)        
-    with open("results.txt", "w") as output_file:
+    with open("results_summary.txt", "w") as output_file:
         pprint.pp(dct_glob, stream=output_file, indent=4)
     
-    # with open(__file__[:-2] + 'txt', 'w') as f:  
-        # for name, grades in dict_31_norm.items():  
-            # st = ',\t'.join([str(round(i)) for i in grades])
-            # fstring = f'{name + ":":15s} {st}'
-            # f.write(fstring + '\n')
-            # print(fstring)
