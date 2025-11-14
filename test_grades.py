@@ -50,11 +50,13 @@ if __name__ == "__main__":
         'activity1.txt': 7
         , 'board1.txt': 7
         , 'hw1.txt': 7 # max 25+8(9)=33(34)
-        , 'hw1volunt.txt': 5
         , 'test1.txt': 7
+        , 'hw1volunt.txt': 5
         #, 'test2.txt': 10
         #, 'activity2.txt': 10
-        #, "project.txt": 10
+        #, 'board2.txt': 10
+        #, "project.txt": 10 # max 25+8(9)=33(34)
+        #, "aux.txt": 3 # 
         } 
 
     names = 'students_2025.txt'
