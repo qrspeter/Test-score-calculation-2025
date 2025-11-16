@@ -49,14 +49,17 @@ if __name__ == "__main__":
     test_files = {
         'activity1.txt': 7
         , 'board1.txt': 7
-        , 'hw1.txt': 7 # max 25+8(9)=33(34)
+        , 'hw1.txt': 8 
         , 'test1.txt': 7
         , 'hw1volunt.txt': 5
-        #, 'test2.txt': 10
-        #, 'activity2.txt': 10
-        #, 'board2.txt': 10
-        #, "project.txt": 10 # max 25+8(9)=33(34)
-        #, "aux.txt": 3 # 
+        # max 25+8(9)=34(33)
+        , 'test2.txt': 7
+        , 'hw2.txt': 7 
+        , 'activity2.txt': 5
+        , 'board2.txt': 5
+        , "project.txt": 9 
+        # max 25+8(9)=33(34)
+        , "auxil.txt": 3 # 
         } 
 
     names = 'students_2025.txt'
