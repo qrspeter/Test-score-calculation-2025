@@ -2,7 +2,7 @@ import pprint
 import copy
 
 def load_results(filename) -> dict:
-    fin = open(filename, 'r')
+    fin = open(filename, 'r', encoding='utf-8')
     lines = fin.readlines()
     fin.close()
     dct = {}
@@ -79,6 +79,13 @@ if __name__ == "__main__":
         pprint.pp(dct_glob, stream=output_file, indent=4)
         
     dct_glob = sum_dct(dct_glob)
+    
+    over60 = 0
+    for key in dct_glob:
+        dct_glob[key] = round(dct_glob[key]*1.4)
+        if dct_glob[key] > 60:
+            over60 += 1
+    print(f"{over60=}")
             
     pprint.pprint(dct_glob, sort_dicts=False)        
     with open("results_summary.txt", "w") as output_file:
