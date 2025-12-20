@@ -53,6 +53,7 @@ if __name__ == "__main__":
         , 'test1.txt': 9
         , 'hw1volunt.txt': 5
         , 'test2.txt': 20
+        , 'test3.txt': 17
         , 'hw2.txt': 10 
         , "project.txt": 9 
         # max 67
